@@ -1,5 +1,5 @@
 const typeorm = require('typeorm');
-
+const express = require('express');
 async function connect() {
     const connection = await typeorm.createConnection({
         type: "postgres",
@@ -7,7 +7,7 @@ async function connect() {
         port: 5432,
         username: "postgres",
         password: "psql",
-        database: "api_wars"
+        database: "postgres"
     });
 
     const players = await connection.query("SELECT * FROM player");
@@ -15,3 +15,7 @@ async function connect() {
 }
 
 connect();
+const app = express();
+app.listen(9999, ()=>{
+    console.log("Hello");
+});
