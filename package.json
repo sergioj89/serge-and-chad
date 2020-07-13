@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/sergioj89/serge-and-chad#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg": "^8.3.0",
+    "typeorm": "^0.2.25"
   }
 }
